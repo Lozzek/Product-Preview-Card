@@ -1,0 +1,181 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+ 
+  /*
+    3. Allow percentage-based heights in the application
+  */
+  html, body {
+    height: 100%;
+  }
+  /*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    background-color: hsl(30, 38%, 92%);
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+    font-size: 14px;
+  }
+  /*
+    6. Improve media defaults
+  */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  /*
+    7. Remove built-in form typography styles
+  */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  /*
+    8. Avoid text overflows
+  */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  /*
+    9. Create a root stacking context
+  */
+  #root, #__next {
+    isolation: isolate;
+  }
+
+  .card {
+    width: 600px;
+    background-color: white;
+    border-radius: 12px;
+  }
+
+  .main-img {
+    display: grid;
+    float: left;
+    width: 50%;
+    height: 100%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+
+  .perfume {
+    display: grid;
+    padding: 20px 15px 0px 26px;
+    margin-top: 0.6rem;
+    
+    text-transform: uppercase;
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: .2rem;
+}
+
+ .title {
+    display: grid;
+    margin-top: 0.6rem;
+    padding: 10px 66px 0px 26px;
+    line-height: 1.7rem;
+
+    font-family: "Fraunces", sans-serif;
+    font-weight: 700;
+ }
+
+
+ .info {
+    display: grid;
+    margin-top: 24px;
+    padding: 0px 30px 0px 30px;
+
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+ }
+
+
+ .prices {
+    display: flex;
+    justify-content: left;
+    align-content: left;
+    margin-top: 1rem;
+ }
+
+ .new-price {
+    padding: 0px 0px 0px 26px;
+
+    font-family: "Fraunces", sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    color: hsl(158, 36%, 37%);
+ }
+
+ .old-price {
+    padding: 14px 0px 0px 20px;
+
+    text-decoration: line-through;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    opacity: .7;
+ }
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background-color: hsl(158, 36%, 37%);
+    height: 48px;
+    width: 240px;
+    margin: 24px 0px 0px 54%;
+    border-radius: 8px;
+}
+
+.shopping-cart {
+    width: 15px;
+    height: 15px;
+    margin: 15px 2px 0px 0px;
+}
+
+.text { 
+    margin: 13px 10px;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+}   
+
+
+.btn:hover {
+  background-color: hsl(159, 40%, 21%);
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .card {
+    display: grid;
+    place-content: center;
+    grid-template-columns: 1fr;
+    width: 340px;
+  }
+
+  .main-img {
+    width: 340px;
+    height: 36vh;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 0px;
+  }
+
+
+  .btn {
+    position: relative;
+    width: 300px;
+    right: 10.2rem;
+    bottom: 1rem;
+  }
+}
